@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main()
+{
+	int size,i,largest=-1,secondlargest=-1;
+	printf("numbers of elemnets:");
+	scanf("%d",&size);
+	int array[size];
+	for(i=0;i<size;i++)
+	{
+		printf("enter:");
+		scanf("%d",&array[i]);
+	}
+	for(i=0;i<size;i++)
+	{
+		if(array[i]>largest)
+		{
+			secondlargest=largest;
+			largest=array[i];
+		}
+		else if(array[i]>secondlargest)
+		{
+			secondlargest=array[i];
+		}
+	}
+	printf("first largest number is %d\n",largest);
+	printf("second largest number is %d\n",secondlargest);
+}
